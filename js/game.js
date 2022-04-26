@@ -40,8 +40,8 @@ let clicks = 0;
 $map.addEventListener("click", function(e){
     clicks++;
     let distance = Distancias(e, target);
-    let distanceHint = DistanciasDelJuego(distance);
-    $distance.innerHTML = `<h1>${distanceHint}</h1>`
+    let jugabilidad = DistanciasDelJuego(distance);
+    $distance.innerHTML = `<h1>${jugabilidad}</h1>`
 
     if (distance < 20){
         alert("Haz encontrado el tesoro en" + " " + clicks + " " + "Clicks");
